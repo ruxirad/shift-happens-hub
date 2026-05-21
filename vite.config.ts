@@ -4,9 +4,11 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig({
   base: "/shift-happens-hub/",
-  plugins: [react(), tailwindcss(), tsconfigPaths()],
+  plugins: [react(), tailwindcss(), tsconfigPaths(), cloudflare()],
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
   },
