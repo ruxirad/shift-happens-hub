@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ScreenShell, EyebrowLabel } from "../ScreenShell";
 import { FacilitatorNote } from "../FacilitatorNote";
-import type { Response } from "../ShiftHappensApp";
+import type { Response } from "../stages";
 
 export function Screen6Empathy({
   responses,

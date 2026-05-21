@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ScreenShell, EyebrowLabel } from "../ScreenShell";
 import { FacilitatorNote } from "../FacilitatorNote";
-import { STAGES, type Stage } from "../ShiftHappensApp";
+import { STAGES, type Stage } from "../stages";
 
 const DESCRIPTORS: Record<Stage, string> = {
   Shock: "'Wait, what just happened?'",

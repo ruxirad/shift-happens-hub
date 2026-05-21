@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { ProgressBar } from "./ProgressBar";
+import { STAGES, type Stage, type Response } from "./stages";
 import { Screen1Welcome } from "./screens/Screen1Welcome";
 import { Screen2HumanSide } from "./screens/Screen2HumanSide";
 import { Screen3ChangeCurve } from "./screens/Screen3ChangeCurve";
@@ -8,26 +9,8 @@ import { Screen5MicroShifts } from "./screens/Screen5MicroShifts";
 import { Screen6Empathy } from "./screens/Screen6Empathy";
 import { Screen7Wrap } from "./screens/Screen7Wrap";
 
-export type Stage =
-  | "Shock"
-  | "Denial"
-  | "Frustration"
-  | "Depression"
-  | "Experimentation"
-  | "Decision"
-  | "Integration";
+export { STAGES, type Stage, type Response };
 
-export const STAGES: Stage[] = [
-  "Shock",
-  "Denial",
-  "Frustration",
-  "Depression",
-  "Experimentation",
-  "Decision",
-  "Integration",
-];
-
-export type Response = { id: string; text: string; x: number; y: number };
 
 export function ShiftHappensApp() {
   const [screen, setScreen] = useState(0);
