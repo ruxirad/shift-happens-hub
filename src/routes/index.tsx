@@ -1,26 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ShiftHappensApp } from "@/components/shift/ShiftHappensApp";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Shift Happens — Lunch & Learn | Unify Consulting" },
+      {
+        name: "description",
+        content:
+          "An interactive 30-minute facilitation experience on leading the human side of change.",
+      },
+      { property: "og:title", content: "Shift Happens — Lunch & Learn" },
+      {
+        property: "og:description",
+        content: "Leading the Human Side of the AI Era.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return <ShiftHappensApp />;
 }
